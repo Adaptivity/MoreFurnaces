@@ -1,0 +1,11 @@
+tile.ironOven.name=Iron Furnace
+tile.goldOven.name=Gold Furnace
+tile.diamondOven.name=Diamond Furnace
+tile.brickOven.name=Brick Furnace
+tile.netherrackOven.name=Netherrack Furnace
+tile.obsidianOven.name=Obsidian Furnace
+tile.quartzOven.name=Quartz Furnace
+item.hardRedstone.name=Hardened Redstone
+tile.hardRedstoneBlock.name=Hardened Redstone Block
+tile.redstoneOven.name=Redstone Oven
+itemGroup.FurnaceTab=Mo' Furnaces

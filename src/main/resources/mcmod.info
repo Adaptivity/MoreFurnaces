@@ -1,0 +1,16 @@
+[
+{
+  "modid": "MoreFurnaces",
+  "name": "Mo' Furnaces",
+  "description": "A mod that adds more furnaces.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["JumpyBlock"],
+  "credits": "jwosty for some help with some features",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
