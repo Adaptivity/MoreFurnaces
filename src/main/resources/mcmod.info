@@ -5,10 +5,10 @@
   "description": "A mod that adds more furnaces.",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "voltmc.tk",
   "updateUrl": "",
-  "authorList": ["JumpyBlock"],
-  "credits": "jwosty for some help with some features",
+  "authorList": ["JumpyBlock", "jwosty],
+  "credits": "CobaltKatana (on PMC) for awesome textures!",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
