@@ -108,7 +108,7 @@ public class GoldOven extends BlockContainer
     {
         this.blockIcon = p_149651_1_.registerIcon("MoreFurnaces:GoldFurnace_side");
         this.field_149936_O = p_149651_1_.registerIcon(this.field_149932_b ? "MoreFurnaces:GoldFurnace_front_active" : "MoreFurnaces:GoldFurnace_front_idle");
-        this.field_149935_N = p_149651_1_.registerIcon("MoreFurnaces:GoldFurnace_side");
+        this.field_149935_N = p_149651_1_.registerIcon("MoreFurnaces:GoldFurnace_top");
     }
 
     /**
