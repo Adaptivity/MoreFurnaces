@@ -9,7 +9,7 @@
   "updateUrl": "",
   "authorList": ["JumpyBlock", "jwosty"],
   "credits": "CobaltKatana (on PMC) for awesome textures!",
-  "logoFile": "",
+  "logoFile": ""assets/VoltLogo.png,
   "screenshots": [],
   "dependencies": []
 }
