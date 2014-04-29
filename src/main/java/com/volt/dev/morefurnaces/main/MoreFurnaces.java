@@ -8,34 +8,35 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 import com.volt.dev.morefurnaces.blocks.HardenedRedstoneBlock;
-import com.volt.dev.morefurnaces.brickfurnace.BrickOven;
-import com.volt.dev.morefurnaces.brickfurnace.RenderBrickOven;
-import com.volt.dev.morefurnaces.brickfurnace.TileEntityBrickOven;
 import com.volt.dev.morefurnaces.creativetab.FurnaceTab;
 import com.volt.dev.morefurnaces.creativetab.placeholder.FurnaceTabPH;
-import com.volt.dev.morefurnaces.diamondfurnace.DiamondOven;
-import com.volt.dev.morefurnaces.diamondfurnace.RenderDiamondOven;
-import com.volt.dev.morefurnaces.diamondfurnace.TileEntityDiamondOven;
-import com.volt.dev.morefurnaces.goldfurnace.GoldOven;
-import com.volt.dev.morefurnaces.goldfurnace.RenderGoldOven;
-import com.volt.dev.morefurnaces.goldfurnace.TileEntityGoldOven;
+import com.volt.dev.morefurnaces.furnaces.brickfurnace.BrickOven;
+import com.volt.dev.morefurnaces.furnaces.brickfurnace.RenderBrickOven;
+import com.volt.dev.morefurnaces.furnaces.brickfurnace.TileEntityBrickOven;
+import com.volt.dev.morefurnaces.furnaces.diamondfurnace.DiamondOven;
+import com.volt.dev.morefurnaces.furnaces.diamondfurnace.RenderDiamondOven;
+import com.volt.dev.morefurnaces.furnaces.diamondfurnace.TileEntityDiamondOven;
+import com.volt.dev.morefurnaces.furnaces.goldfurnace.GoldOven;
+import com.volt.dev.morefurnaces.furnaces.goldfurnace.RenderGoldOven;
+import com.volt.dev.morefurnaces.furnaces.goldfurnace.TileEntityGoldOven;
+import com.volt.dev.morefurnaces.furnaces.ironfurnace.IronOven;
+import com.volt.dev.morefurnaces.furnaces.ironfurnace.RenderIronOven;
+import com.volt.dev.morefurnaces.furnaces.ironfurnace.TileEntityIronOven;
+import com.volt.dev.morefurnaces.furnaces.netherrackfurnace.NetherrackOven;
+import com.volt.dev.morefurnaces.furnaces.netherrackfurnace.RenderNetherrackOven;
+import com.volt.dev.morefurnaces.furnaces.netherrackfurnace.TileEntityNetherrackOven;
+import com.volt.dev.morefurnaces.furnaces.obsidianfurnace.ObsidianOven;
+import com.volt.dev.morefurnaces.furnaces.obsidianfurnace.RenderObsidianOven;
+import com.volt.dev.morefurnaces.furnaces.obsidianfurnace.TileEntityObsidianOven;
+import com.volt.dev.morefurnaces.furnaces.quartzfurnace.QuartzOven;
+import com.volt.dev.morefurnaces.furnaces.quartzfurnace.RenderQuartzOven;
+import com.volt.dev.morefurnaces.furnaces.quartzfurnace.TileEntityQuartzOven;
+import com.volt.dev.morefurnaces.furnaces.redstonefurnace.RedstoneOven;
+import com.volt.dev.morefurnaces.furnaces.redstonefurnace.RenderRedstoneOven;
 import com.volt.dev.morefurnaces.guihandler.GuiHandlerFurnace;
-import com.volt.dev.morefurnaces.ironfurnace.IronOven;
-import com.volt.dev.morefurnaces.ironfurnace.RenderIronOven;
-import com.volt.dev.morefurnaces.ironfurnace.TileEntityIronOven;
 import com.volt.dev.morefurnaces.items.HardenedRedstone;
-import com.volt.dev.morefurnaces.misc.References;
-import com.volt.dev.morefurnaces.netherrackfurnace.NetherrackOven;
-import com.volt.dev.morefurnaces.netherrackfurnace.RenderNetherrackOven;
-import com.volt.dev.morefurnaces.netherrackfurnace.TileEntityNetherrackOven;
-import com.volt.dev.morefurnaces.obsidianfurnace.ObsidianOven;
-import com.volt.dev.morefurnaces.obsidianfurnace.RenderObsidianOven;
-import com.volt.dev.morefurnaces.obsidianfurnace.TileEntityObsidianOven;
-import com.volt.dev.morefurnaces.quartzfurnace.QuartzOven;
-import com.volt.dev.morefurnaces.quartzfurnace.RenderQuartzOven;
-import com.volt.dev.morefurnaces.quartzfurnace.TileEntityQuartzOven;
-import com.volt.dev.morefurnaces.redstonefurnace.RedstoneOven;
-import com.volt.dev.morefurnaces.redstonefurnace.RenderRedstoneOven;
+import com.volt.dev.morefurnaces.main.proxies.CommonProxy;
+import com.volt.dev.morefurnaces.main.references.References;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.Mod;
@@ -50,7 +51,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 @Mod(modid = References.MODID, name = References.NAME, version = References.VERSION)
 public class MoreFurnaces {
 	// Client and Server Proxy locations
-	@SidedProxy(clientSide = "com.volt.dev.morefurnaces.main.ClientProxy", serverSide = "com.volt.dev.morefurnaces.main.CommonProxy")
+	@SidedProxy(clientSide = "com.volt.dev.morefurnaces.main.proxies.ClientProxy", serverSide = "com.volt.dev.morefurnaces.main.proxies.CommonProxy")
 	public static CommonProxy proxy;
 	
 	// Mod Instance
