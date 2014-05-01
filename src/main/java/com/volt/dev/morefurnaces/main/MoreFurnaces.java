@@ -7,7 +7,6 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-import com.volt.dev.morefurnaces.blocks.HardenedRedstoneBlock;
 import com.volt.dev.morefurnaces.creativetab.FurnaceTab;
 import com.volt.dev.morefurnaces.creativetab.placeholder.FurnaceTabPH;
 import com.volt.dev.morefurnaces.furnaces.brickfurnace.BrickOven;
@@ -31,10 +30,7 @@ import com.volt.dev.morefurnaces.furnaces.obsidianfurnace.TileEntityObsidianOven
 import com.volt.dev.morefurnaces.furnaces.quartzfurnace.QuartzOven;
 import com.volt.dev.morefurnaces.furnaces.quartzfurnace.RenderQuartzOven;
 import com.volt.dev.morefurnaces.furnaces.quartzfurnace.TileEntityQuartzOven;
-import com.volt.dev.morefurnaces.furnaces.redstonefurnace.RedstoneOven;
-import com.volt.dev.morefurnaces.furnaces.redstonefurnace.RenderRedstoneOven;
 import com.volt.dev.morefurnaces.guihandler.GuiHandlerFurnace;
-import com.volt.dev.morefurnaces.items.HardenedRedstone;
 import com.volt.dev.morefurnaces.main.proxies.CommonProxy;
 import com.volt.dev.morefurnaces.main.references.References;
 
@@ -89,14 +85,6 @@ public class MoreFurnaces {
 	// Quartz Furnace Declaration
 	public static Block quartzOven;
 	public static Block quartzOvenActive;
-	
-	// Hardened Redstone
-	public static Item hardRedstone;
-	public static Block hardRedstoneBlock;
-	
-	// Redstone Furnace
-	public static Block redstoneOven;
-	public static Block redstoneOvenActive;
 	
 	@EventHandler
 	public void load(FMLInitializationEvent event) {
@@ -287,45 +275,6 @@ public class MoreFurnaces {
 		
 		RenderingRegistry.registerBlockHandler(2111, RenderQuartzOven.INSTANCE);
 		
-		// Hardened Redstone
-		hardRedstone = new HardenedRedstone().setUnlocalizedName("hardRedstone").setCreativeTab(furnaceTab).setTextureName("MoreFurnaces:HardenedRedstone");
-		hardRedstoneBlock = new HardenedRedstoneBlock().setBlockName("hardRedstoneBlock").setCreativeTab(furnaceTab).setResistance(10F).setHardness(7.5F).setBlockTextureName("MoreFurnaces:HardenedRedstoneBlock");
-		
-		GameRegistry.registerItem(hardRedstone, "hardRedstone");
-		GameRegistry.registerBlock(hardRedstoneBlock, "hardRedstoneBlock");
-		
-		GameRegistry.addRecipe(new ItemStack(hardRedstone, 2), new Object[] {
-			" A ",
-			"ABA",
-			" A ",
-			'A', Blocks.stone, 'B', Items.redstone
-		});
-		GameRegistry.addRecipe(new ItemStack(hardRedstone, 4), new Object[] {
-			"A",
-			'A', hardRedstoneBlock
-		});
-		GameRegistry.addRecipe(new ItemStack(hardRedstoneBlock, 1), new Object[] {
-			"AA",
-			"AA",
-			'A', hardRedstone
-		});
-		
-		// Redstone Furnace
-		redstoneOven = new RedstoneOven(false).setHardness(1.5F).setResistance(8F).setBlockName("redstoneOven").setCreativeTab(furnaceTab);
-		redstoneOvenActive = new RedstoneOven(true).setHardness(1.5F).setResistance(8F).setBlockName("redstoneOvenActive");
-		
-		GameRegistry.registerBlock(redstoneOven, "redstoneOven");
-		GameRegistry.registerBlock(redstoneOvenActive, "redstoneOvenActive");
-		
-		GameRegistry.addRecipe(new ItemStack(redstoneOven, 1), new Object[] {
-			"AAA",
-			"A A",
-			"AAA",
-			'A', hardRedstone
-		});
-		
-		RenderingRegistry.registerBlockHandler(2112, RenderRedstoneOven.INSTANCE);
-	
 		// Register GuiHandler
 		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandlerFurnace());
 	}

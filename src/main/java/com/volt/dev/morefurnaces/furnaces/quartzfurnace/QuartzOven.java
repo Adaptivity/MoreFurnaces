@@ -110,7 +110,7 @@ public class QuartzOven extends BlockContainer
     {
         this.blockIcon = p_149651_1_.registerIcon("MoreFurnaces:QuartzFurnace_side");
         this.field_149936_O = p_149651_1_.registerIcon(this.field_149932_b ? "MoreFurnaces:QuartzFurnace_front_active" : "MoreFurnaces:QuartzFurnace_front_idle");
-        this.field_149935_N = p_149651_1_.registerIcon("MoreFurnaces:QuartzFurnace_side");
+        this.field_149935_N = p_149651_1_.registerIcon("MoreFurnaces:QuartzFurnace_top");
     }
 
     /**
