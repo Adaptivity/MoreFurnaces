@@ -17,8 +17,8 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "ALPHA"
-group= "com.volt.dev.morefurnaces" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+version = "1.0"
+group= "com.jumpyblock.morefurnaces" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "MoreFurnaces"
 
 minecraft {
