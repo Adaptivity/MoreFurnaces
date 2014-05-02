@@ -209,7 +209,7 @@ public class TileEntityNetherrackOven extends TileEntity implements ISidedInvent
     @SideOnly(Side.CLIENT)
     public int getCookProgressScaled(int p_145953_1_)
     {
-        return this.furnaceCookTime * p_145953_1_ / 160;
+        return this.furnaceCookTime * p_145953_1_ / 195;
     }
 
     /**
@@ -221,7 +221,7 @@ public class TileEntityNetherrackOven extends TileEntity implements ISidedInvent
     {
         if (this.currentItemBurnTime == 0)
         {
-            this.currentItemBurnTime = 160;
+            this.currentItemBurnTime = 195;
         }
 
         return this.furnaceBurnTime * p_145955_1_ / this.currentItemBurnTime;
@@ -271,7 +271,7 @@ public class TileEntityNetherrackOven extends TileEntity implements ISidedInvent
             {
                 ++this.furnaceCookTime;
 
-                if (this.furnaceCookTime == 160)
+                if (this.furnaceCookTime == 195)
                 {
                     this.furnaceCookTime = 0;
                     this.smeltItem();
@@ -363,28 +363,28 @@ public class TileEntityNetherrackOven extends TileEntity implements ISidedInvent
 
                 if (block == Blocks.wooden_slab)
                 {
-                    return 180;
+                    return 155;
                 }
 
                 if (block.getMaterial() == Material.wood)
                 {
-                    return 330;
+                    return 305;
                 }
 
                 if (block == Blocks.coal_block)
                 {
-                    return 16030;
+                    return 16005;
                 }
             }
 
-            if (item instanceof ItemTool && ((ItemTool)item).getToolMaterialName().equals("WOOD")) return 230;
-            if (item instanceof ItemSword && ((ItemSword)item).getToolMaterialName().equals("WOOD")) return 230;
-            if (item instanceof ItemHoe && ((ItemHoe)item).getToolMaterialName().equals("WOOD")) return 230;
-            if (item == Items.stick) return 130;
-            if (item == Items.coal) return 1630;
-            if (item == Items.lava_bucket) return 20030;
-            if (item == Item.getItemFromBlock(Blocks.sapling)) return 130;
-            if (item == Items.blaze_rod) return 2430;
+            if (item instanceof ItemTool && ((ItemTool)item).getToolMaterialName().equals("WOOD")) return 205;
+            if (item instanceof ItemSword && ((ItemSword)item).getToolMaterialName().equals("WOOD")) return 205;
+            if (item instanceof ItemHoe && ((ItemHoe)item).getToolMaterialName().equals("WOOD")) return 205;
+            if (item == Items.stick) return 105;
+            if (item == Items.coal) return 1605;
+            if (item == Items.lava_bucket) return 20000;
+            if (item == Item.getItemFromBlock(Blocks.sapling)) return 105;
+            if (item == Items.blaze_rod) return 2405;
             return GameRegistry.getFuelValue(p_145952_0_);
         }
     }
