@@ -109,12 +109,6 @@ public class MoreFurnaces {
 			"AAA",
 			'A', Items.iron_ingot
 		});
-		GameRegistry.addRecipe(new ItemStack(ironOven, 1), new Object[] {
-			"AAA",
-			"ABA",
-			"AAA",
-			'A', Items.iron_ingot, 'B', Blocks.furnace
-		});
 		
 		RenderingRegistry.registerBlockHandler(2105, RenderIronOven.INSTANCE);
 		
@@ -132,18 +126,6 @@ public class MoreFurnaces {
 			"A A",
 			"AAA",
 			'A', Items.gold_ingot
-		});
-		GameRegistry.addRecipe(new ItemStack(goldOven, 1), new Object[] {
-			"AAA",
-			"ABA",
-			"AAA",
-			'A', Items.gold_ingot, 'B', Blocks.furnace
-		});
-		GameRegistry.addRecipe(new ItemStack(goldOven, 1), new Object[] {
-			"AAA",
-			"ABA",
-			"AAA",
-			'A', Items.gold_ingot, 'B', ironOven
 		});
 		
 		RenderingRegistry.registerBlockHandler(2106, RenderGoldOven.INSTANCE);
@@ -163,18 +145,6 @@ public class MoreFurnaces {
 			"AAA",
 			'A', Items.diamond
 		});
-		GameRegistry.addRecipe(new ItemStack(diamondOven, 1), new Object[] {
-			"AAA",
-			"ABA",
-			"AAA",
-			'A', Items.diamond, 'B', Blocks.furnace
-		});
-		GameRegistry.addRecipe(new ItemStack(diamondOven, 1), new Object[] {
-			"AAA",
-			"ABA",
-			"AAA",
-			'A', Items.diamond, 'B', goldOven
-		});
 		
 		RenderingRegistry.registerBlockHandler(2107, RenderDiamondOven.INSTANCE);
 		
@@ -192,12 +162,6 @@ public class MoreFurnaces {
 			"A A",
 			"AAA",
 			'A', Blocks.brick_block
-		});
-		GameRegistry.addRecipe(new ItemStack(brickOven, 1), new Object[] {
-			"AAA",
-			"ABA",
-			"AAA",
-			'A', Blocks.brick_block, 'B', Blocks.furnace
 		});
 		
 		RenderingRegistry.registerBlockHandler(2108, RenderBrickOven.INSTANCE);
@@ -217,12 +181,6 @@ public class MoreFurnaces {
 			"AAA",
 			'A', Blocks.netherrack
 		});
-		GameRegistry.addRecipe(new ItemStack(netherrackOven, 1), new Object[] {
-			"AAA",
-			"ABA",
-			"AAA",
-			'A', Blocks.netherrack, 'B', Blocks.furnace
-		});
 		
 		RenderingRegistry.registerBlockHandler(2109, RenderNetherrackOven.INSTANCE);
 		
@@ -241,13 +199,6 @@ public class MoreFurnaces {
 			"AAA",
 			'A', Blocks.obsidian
 		});
-		GameRegistry.addRecipe(new ItemStack(obsidianOven, 1), new Object[] {
-			
-			"AAA",
-			"ABA",
-			"AAA",
-			'A', Blocks.obsidian, 'B', Blocks.furnace
-		});
 		
 		RenderingRegistry.registerBlockHandler(2110, RenderObsidianOven.INSTANCE);
 		
@@ -265,12 +216,6 @@ public class MoreFurnaces {
 			"A A",
 			"AAA",
 			'A', Blocks.quartz_block
-		});
-		GameRegistry.addRecipe(new ItemStack(quartzOven, 1), new Object[] {
-			"AAA",
-			"ABA",
-			"AAA",
-			'A', Blocks.quartz_block, 'B', Blocks.furnace
 		});
 		
 		RenderingRegistry.registerBlockHandler(2111, RenderQuartzOven.INSTANCE);
