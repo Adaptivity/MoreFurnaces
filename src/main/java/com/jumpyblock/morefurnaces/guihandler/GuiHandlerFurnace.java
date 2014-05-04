@@ -7,6 +7,9 @@ import net.minecraft.world.World;
 import com.jumpyblock.morefurnaces.furnaces.brickfurnace.ContainerBrickOven;
 import com.jumpyblock.morefurnaces.furnaces.brickfurnace.GuiBrickOven;
 import com.jumpyblock.morefurnaces.furnaces.brickfurnace.TileEntityBrickOven;
+import com.jumpyblock.morefurnaces.furnaces.cactusfurnace.ContainerCactusOven;
+import com.jumpyblock.morefurnaces.furnaces.cactusfurnace.GuiCactusOven;
+import com.jumpyblock.morefurnaces.furnaces.cactusfurnace.TileEntityCactusOven;
 import com.jumpyblock.morefurnaces.furnaces.diamondfurnace.ContainerDiamondOven;
 import com.jumpyblock.morefurnaces.furnaces.diamondfurnace.GuiDiamondOven;
 import com.jumpyblock.morefurnaces.furnaces.diamondfurnace.TileEntityDiamondOven;
@@ -43,6 +46,7 @@ public class GuiHandlerFurnace implements IGuiHandler
 		case 4: return new ContainerNetherrackOven(player.inventory, (TileEntityNetherrackOven) tile_entity);
 		case 5: return new ContainerObsidianOven(player.inventory, (TileEntityObsidianOven) tile_entity);
 		case 6: return new ContainerQuartzOven(player.inventory, (TileEntityQuartzOven) tile_entity);
+		case 7: return new ContainerCactusOven(player.inventory, (TileEntityCactusOven) tile_entity);
 		}
 		return null;
 	}
@@ -60,6 +64,7 @@ public class GuiHandlerFurnace implements IGuiHandler
 		case 4: return new GuiNetherrackOven(player.inventory, (TileEntityNetherrackOven) tile_entity);
 		case 5: return new GuiObsidianOven(player.inventory, (TileEntityObsidianOven) tile_entity);
 		case 6: return new GuiQuartzOven(player.inventory, (TileEntityQuartzOven) tile_entity);
+		case 7: return new GuiCactusOven(player.inventory, (TileEntityCactusOven) tile_entity);
 		}
 		return null;
 	}

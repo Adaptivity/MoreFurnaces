@@ -12,6 +12,8 @@ import com.jumpyblock.morefurnaces.creativetab.placeholder.FurnaceTabPH;
 import com.jumpyblock.morefurnaces.furnaces.brickfurnace.BrickOven;
 import com.jumpyblock.morefurnaces.furnaces.brickfurnace.RenderBrickOven;
 import com.jumpyblock.morefurnaces.furnaces.brickfurnace.TileEntityBrickOven;
+import com.jumpyblock.morefurnaces.furnaces.cactusfurnace.CactusOven;
+import com.jumpyblock.morefurnaces.furnaces.cactusfurnace.RenderCactusOven;
 import com.jumpyblock.morefurnaces.furnaces.diamondfurnace.DiamondOven;
 import com.jumpyblock.morefurnaces.furnaces.diamondfurnace.RenderDiamondOven;
 import com.jumpyblock.morefurnaces.furnaces.diamondfurnace.TileEntityDiamondOven;
@@ -85,6 +87,10 @@ public class MoreFurnaces {
 	// Quartz Furnace Declaration
 	public static Block quartzOven;
 	public static Block quartzOvenActive;
+	
+	// Cactus Furnace Declaration
+	public static Block cactusOven;
+	public static Block cactusOvenActive;
 	
 	@EventHandler
 	public void load(FMLInitializationEvent event) {
@@ -219,6 +225,22 @@ public class MoreFurnaces {
 		});
 		
 		RenderingRegistry.registerBlockHandler(2111, RenderQuartzOven.INSTANCE);
+		
+		// Cactus Furnace Block
+		cactusOven = new CactusOven(false).setHardness(1.2F).setResistance(1.0F).setBlockName("cactusOven").setCreativeTab(furnaceTab);
+		cactusOvenActive = new CactusOven(true).setHardness(1.2F).setResistance(1.0F).setBlockName("cactusOvenActive");
+		
+		GameRegistry.registerBlock(cactusOven, "cactusOven");
+		GameRegistry.registerBlock(cactusOvenActive, "cactucOvenActive");
+		
+		GameRegistry.addRecipe(new ItemStack(cactusOven, 1), new Object[] {
+			"AAA",
+			"A A",
+			"AAA",
+			'A', Blocks.cactus
+		});
+		
+		RenderingRegistry.registerBlockHandler(2112, RenderCactusOven.INSTANCE);
 		
 		// Register GuiHandler
 		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandlerFurnace());
