@@ -33,6 +33,7 @@ import com.jumpyblock.morefurnaces.furnaces.quartzfurnace.QuartzOven;
 import com.jumpyblock.morefurnaces.furnaces.quartzfurnace.RenderQuartzOven;
 import com.jumpyblock.morefurnaces.furnaces.quartzfurnace.TileEntityQuartzOven;
 import com.jumpyblock.morefurnaces.guihandler.GuiHandlerFurnace;
+import com.jumpyblock.morefurnaces.items.HardRedstone;
 import com.jumpyblock.morefurnaces.main.proxies.CommonProxy;
 import com.jumpyblock.morefurnaces.main.references.References;
 
@@ -91,6 +92,12 @@ public class MoreFurnaces {
 	// Cactus Furnace Declaration
 	public static Block cactusOven;
 	public static Block cactusOvenActive;
+	
+	// Hardened Redstone
+	public static Item hardRedstone;
+	public static Block hardRedstoneBlock;
+	public static Block redstoneOvenIdle;
+	public static Block redstoneOvenActive;
 	
 	@EventHandler
 	public void load(FMLInitializationEvent event) {
@@ -242,6 +249,14 @@ public class MoreFurnaces {
 		
 		RenderingRegistry.registerBlockHandler(2112, RenderCactusOven.INSTANCE);
 		
+		// Hardened Redstone Stuff
+		hardRedstone = new HardRedstone().setUnlocalizedName("hardRedstone").setCreativeTab(furnaceTab).setTextureName(References.MODID + ":HardRedstone");
+		
+		GameRegistry.registerItem(hardRedstone, "hardRedstone");
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(hardRedstone, 1), new Object[] {
+			Blocks.stone, Items.redstone
+		});
 		// Register GuiHandler
 		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandlerFurnace());
 	}
