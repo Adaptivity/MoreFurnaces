@@ -1,3 +1,4 @@
+itemGroup.FurnaceTab=Mo' Furnaces
 tile.ironOven.name=Iron Furnace
 tile.goldOven.name=Gold Furnace
 tile.diamondOven.name=Diamond Furnace
@@ -7,4 +8,5 @@ tile.obsidianOven.name=Obsidian Furnace
 tile.quartzOven.name=Quartz Furnace
 tile.cactusOven.name=Cactus Furnace
 item.hardRedstone.name=Hardened Redstone
-itemGroup.FurnaceTab=Mo' Furnaces
+tile.hardRedstoneBlock.name=Hardened Redstone Block
+tile.redstoneOven.name=Redstone Furnace
