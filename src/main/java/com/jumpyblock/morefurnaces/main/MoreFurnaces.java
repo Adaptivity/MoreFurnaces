@@ -7,6 +7,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
+import com.jumpyblock.morefurnaces.blocks.HardRedstoneWire;
 import com.jumpyblock.morefurnaces.creativetab.FurnaceTab;
 import com.jumpyblock.morefurnaces.creativetab.placeholder.FurnaceTabPH;
 import com.jumpyblock.morefurnaces.furnaces.brickfurnace.BrickOven;
@@ -95,6 +96,7 @@ public class MoreFurnaces {
 	
 	// Hardened Redstone
 	public static Item hardRedstone;
+	public static Block hardRedstoneWire;
 	public static Block hardRedstoneBlock;
 	public static Block redstoneOvenIdle;
 	public static Block redstoneOvenActive;
@@ -251,8 +253,10 @@ public class MoreFurnaces {
 		
 		// Hardened Redstone Stuff
 		hardRedstone = new HardRedstone().setUnlocalizedName("hardRedstone").setCreativeTab(furnaceTab).setTextureName(References.MODID + ":HardRedstone");
+		hardRedstoneWire = new HardRedstoneWire().setBlockName("hardRedstoneWire").setResistance(0.9F).setHardness(0.9F);
 		
 		GameRegistry.registerItem(hardRedstone, "hardRedstone");
+		GameRegistry.registerBlock(hardRedstoneWire, "hardRedstoneWire");
 		
 		GameRegistry.addShapelessRecipe(new ItemStack(hardRedstone, 1), new Object[] {
 			Blocks.stone, Items.redstone
