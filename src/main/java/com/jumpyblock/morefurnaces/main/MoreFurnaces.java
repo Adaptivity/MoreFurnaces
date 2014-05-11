@@ -98,9 +98,7 @@ public class MoreFurnaces {
 	
 	// Hardened Redstone
 	public static Item hardRedstone;
-	public static Block hardRedstoneWire;
-	public static Block hardRedstoneBlock;
-	public static Block redstoneOven
+	public static Block redstoneOven;
 	public static Block redstoneOvenActive;
 	
 	@EventHandler
@@ -255,32 +253,22 @@ public class MoreFurnaces {
 		
 		// Hardened Redstone Stuff
 		hardRedstone = new HardRedstone().setUnlocalizedName("hardRedstone").setCreativeTab(furnaceTab).setTextureName(References.MODID + ":HardRedstone");
-		hardRedstoneWire = new HardRedstoneWire().setBlockName("hardRedstoneWire").setResistance(0.9F).setHardness(0.9F);
-		hardRedstoneBlock = new HardRedstoneBlock(MapColor.tntColor).setBlockName("hardRedstoneBlock").setResistance(12.3F).setHardness(7.5F).setBlockTextureName(References.MODID + ":HardRedstoneBlock").setCreativeTab(furnaceTab);
 		redstoneOven = new RedstoneOven(false).setHardness(7.5F).setResistance(12.3F).setBlockName("redstoneOven").setCreativeTab(furnaceTab);
 		redstoneOvenActive = new RedstoneOven(true).setHardness(7.5F).setResistance(12.3F).setBlockName("redstoneOvenActive");
 				
 		
 		GameRegistry.registerItem(hardRedstone, "hardRedstone");
-		GameRegistry.registerBlock(hardRedstoneWire, "hardRedstoneWire");
-		GameRegistry.registerBlock(hardRedstoneBlock, "hardRedstoneBlock");
 		GameRegistry.registerBlock(redstoneOven, "redstoneOven");
 		GameRegistry.registerBlock(redstoneOvenActive, "redstoneOvenActive");
 		
 		GameRegistry.addShapelessRecipe(new ItemStack(hardRedstone, 3), new Object[] {
 			Blocks.stone, Items.redstone
 		});
-		GameRegistry.addRecipe(new ItemStack(hardRedstoneBlock, 1), new Object[] {
-			"AAA",
-			"AAA",
-			"AAA",
-			'A', hardRedstone
-		});
 		GameRegistry.addRecipe(new ItemStack(redstoneOven, 1), new Object[] {
 			"AAA",
 			"A A",
 			"AAA",
-			'A', hardRedstoneBlock
+			'A', hardRedstone
 		});
 		
 		RenderingRegistry.registerBlockHandler(2113, RenderRedstoneOven.INSTANCE);
